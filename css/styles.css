@@ -8,6 +8,9 @@
     --third-color:#AB987A;
     --hover-color:#ff533d;
     --hover-color-rgb:rgb(255, 83, 61,.5);
+
+    /*tamaño de fuente*/
+    --title:clamp(2.5rem,5vw,3.75rem);
 }
 
 
@@ -117,7 +120,7 @@ body{
 }
 
 .text__title{
-    font-size: 45px;
+    font-size:  var(--title); /* 45px;*/
     margin-bottom: 0.313rem;
     margin-top: 1.563rem;
     font-family: 'Rouge Script', cursive;
@@ -161,7 +164,7 @@ body{
 .projects-frame__title {
     font-size: 1rem;
     line-height: 2.5rem;  
-    transform: translateX(-280%);
+    transform: translateX(-600%);
 }
 
 .projects-frame__title__link{
@@ -257,6 +260,29 @@ body{
         align-items: center; /**/
         
     }
+
+    .layer__about {
+        position: absolute;
+        top: 1vh;        
+        font-size: 3.5rem;
+          
+    }
+
+    .layer__title{    
+        font-size: 4rem;    
+        margin-left: 0.625rem;
+    }
+    
+    .layer__point{
+        position: relative;
+        top:2vh;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--hover-color); 
+    }
+    
     
    
 }
