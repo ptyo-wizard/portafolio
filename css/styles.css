@@ -161,7 +161,7 @@ body{
 .projects-frame__title {
     font-size: 1rem;
     line-height: 2.5rem;  
-    transform: translateX(-150%);
+    transform: translateX(-280%);
 }
 
 .projects-frame__title__link{
