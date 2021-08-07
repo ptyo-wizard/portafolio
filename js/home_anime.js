@@ -7,9 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const base_layer = document.querySelector('.home-sect');
     const title = document.querySelector('.home-sect__text');
-    const projects = document.querySelectorAll('div.projects-frame');
+    const projects = document.querySelectorAll('.projects-frame__title');
     const inputMenu = document.querySelector('#menu');
-    const legendProject = document.querySelector('.projects__legend');
+    const legendProject = document.querySelector('.legend__projects');
     const socialIcons = document.querySelector('.home-sect__social');
     const skillsIcons = document.querySelector('.home-sect__skills');
 
@@ -162,15 +162,15 @@ window.addEventListener('DOMContentLoaded', () => {
         anime.set([title],{
             opacity:0,
         })
-        // anime.set([legendProject],{
-        //     opacity:0,
-        // })
-        // anime.set([socialIcons],{
-        //     opacity:0,
-        // })
-        // anime.set([skillsIcons],{
-        //     opacity:0,
-        // })
+         anime.set([legendProject],{
+             opacity:0,
+        })
+        anime.set([socialIcons],{
+             opacity:0,
+        })
+        anime.set([skillsIcons],{
+            opacity:0,
+        })
 
         animation
         .add({
@@ -182,24 +182,49 @@ window.addEventListener('DOMContentLoaded', () => {
             targets:[title],
             opacity:1
         })
-        // .add ({
-        //     targets:[legendProject],
-        //     opacity:1
-        // })
-        // .add({
-        //     targets:[socialIcons],
-        //     opacity:1
-        // })
+        .add ({
+             targets:[legendProject],
+             opacity:1,
+             complete: moveProjects,  
+             
+        })
 
-        // .add({
-        //     targets:[skillsIcons],
-        //     opacity:1
-        // })
+         
+        .add({
+            targets:[socialIcons],
+            opacity:1
+        })
+
+        .add({
+            targets:[skillsIcons],
+            opacity:1
+        })
+
+       
         
 
         // animation.finished.then(()=>{            
         //     //moveProjects();
         // })
+    }
+
+    const moveProjects = () => { 
+        animation = anime.timeline({
+            duration:1500,
+            autoplay:true
+        });
+
+        anime.set([projects],{
+            translateX: '-150%',
+        });
+
+        animation
+        .add({
+            targets:[projects],       
+            translateX:0,
+            //opacity:1,
+            delay: anime.stagger(500)
+        });
     }
 
     document.addEventListener('click',(event)=>{

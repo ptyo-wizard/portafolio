@@ -44,13 +44,13 @@ body{
 .layer__about {
     position: absolute;
     top: 0;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     background: var(--secondary-color);
     background: linear-gradient(90deg,var(--secondary-color),var(--primary-color));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip:text;
-    opacity: 0;     /*.4*/
+    opacity: 0;     
 }
 
 
@@ -128,19 +128,20 @@ body{
     width: 100%;
     padding: 0 15px;
     opacity: 0;
+    margin-bottom: 0.625rem;
 }
 
 .text__title{
     font-size: 45px;
-    margin-bottom: 5px;
-    margin-top: 45px;
+    margin-bottom: 0.313rem;
+    margin-top: 1.563rem;
     font-family: 'Rouge Script', cursive;
 }
 
-.text__title a{
-    
+.text__title a{    
     color:var(--third-color);
 }
+
 .text__copy{
     font-size: 1rem;
     text-align: center;
@@ -158,7 +159,7 @@ body{
     width: 100%;
     height: 30%;    
     border: 1px solid yellowgreen;
-    margin-top: 50px;
+    
     /* position: relative; */
 }
 
@@ -167,21 +168,27 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;    
+    
 }
 
 
 
-.projects-frame__name {
+.projects-frame__title {
     font-size: 1rem;
-    line-height: 2.5rem;
+    line-height: 2.5rem;  
+    transform: translateX(-150%);
+}
+
+.projects-frame__title__link{
     color: var(--secondary-color);
-    /* cursor: pointer;         */
+    cursor: pointer;  
    --clippy:  polygon(0 0, 0 0, 0 100%, 0 100%); 
    position: relative;
+   
 }
 
 
-.projects-frame__name::after{
+.projects-frame__title__link::after{
     position: absolute;
     top:30%;    
     z-index: 0;
@@ -196,15 +203,16 @@ body{
 }
 
 
-.projects-frame__name:hover{    
+.projects-frame__title__link:hover{    
     --clippy:  polygon(0 0, 100% 0, 100% 100%, 0 100%);         
 } 
 
 .legend__projects{
-    font-size: 2rem;
+    font-size: 1.86em;
     color:var(--secondary-color);
     transform: rotate(90deg);
     mix-blend-mode: overlay;
+    opacity: 0;
     
 }
 
@@ -214,19 +222,22 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 0.625rem;
+    opacity: 0;
 }
 
-.legend__skills a{
-    font-size: 1.5rem;
+.legend__skills{
+    font-size: 1rem;
     color: var(--secondary-color);
     mix-blend-mode: overlay;
+    
 }
+
 .skills-frame{
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(5,1fr);
-
+    
 }
 
 .skills-frame__icon{
@@ -237,12 +248,13 @@ body{
 /*redes sociales home*/
 .home-sect__social{
     position: absolute;
-    top:50%;
-    left: 90%;
+    top:40%;
+    left: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    opacity: 0;
 }
 
 .social-icon{
