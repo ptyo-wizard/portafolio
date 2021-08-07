@@ -9,6 +9,9 @@
     --hover-color:#ff533d;
     --hover-color-rgb:rgb(255, 83, 61,.5);
 
+    /*color texto*/
+    --text-color:#414141;
+
     /*contenedor general*/
     --paddign-container:6.25em 0;   
     --width-container:90%; 
@@ -17,6 +20,9 @@
 
     /*tamaño de fuente*/
     --title:clamp(2.5rem,5vw,3.75rem);
+    --text-title:  clamp(1.5rem,4vw,2.188rem);
+    --text-subtitle: 1.188rem;
+    --text-paragraph: clamp(1rem,2vw,1.25rem);
 }
 
 
@@ -27,6 +33,29 @@ body{
 }
 
 /*clases base */
+.title{
+    font-size: var(--text-title);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.sub-title{
+    font-size: var(--text-subtitle);
+    font-weight: 500;
+    color: var(--third-color);
+    margin-bottom: 30px;
+}
+
+.paragraph{
+    font-size: var(--text-paragraph);    
+    font-weight: 400;
+    line-height: 1.875rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+
 .container{
     width: var(--width-container);
     max-width: var(--maxwidth-container);
