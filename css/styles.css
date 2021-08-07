@@ -9,6 +9,12 @@
     --hover-color:#ff533d;
     --hover-color-rgb:rgb(255, 83, 61,.5);
 
+    /*contenedor general*/
+    --paddign-container:6.25em 0;   
+    --width-container:90%; 
+    --maxwidth-container:1200px;
+
+
     /*tamaño de fuente*/
     --title:clamp(2.5rem,5vw,3.75rem);
 }
@@ -18,6 +24,16 @@ body{
     font-family: 'Roboto', sans-serif;
     /* font-family: 'Rouge Script', cursive; */
     background-color: var(--secondary-color);
+}
+
+/*clases base */
+.container{
+    width: var(--width-container);
+    max-width: var(--maxwidth-container);
+    padding: var(--paddign-container);
+    margin: 0 auto;
+    overflow: hidden;
+    border:1px solid red;
 }
 
 /*hero*/
