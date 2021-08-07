@@ -20,14 +20,14 @@ window.addEventListener('DOMContentLoaded', () => {
     //valores de avance 
     const firtsLayerFall = 10;
     const secondLayerFall = 33;
-    const thirdLayerFall = 55;
+    const thirdLayerFall = 49;
 
     const firtsBallFall = 25;
     const secondBallFall = secondLayerFall;
 
     const firtsGreetingFall = secondLayerFall;
-    const secondsGreetingFall = 55;
-    const thirdGreetingFall = 80;
+    const secondsGreetingFall = thirdLayerFall;
+    const thirdGreetingFall = 73;
 
     const debounceBall=() => {
         animation = anime.timeline({        
