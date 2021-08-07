@@ -37,7 +37,7 @@ body{
     height: 90vh;
     
     position: relative;
-    /* background: var(--primary-color); */
+    
 }
 
 /*fondo soy*/
@@ -247,3 +247,16 @@ body{
     margin-top: 0.625rem;
 }
 
+/****************************home desktop*******************************/
+@media screen and (min-width:768px){
+    .hero{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; /**/
+        
+    }
+    
+   
+}
