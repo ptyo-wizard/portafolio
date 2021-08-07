@@ -211,10 +211,22 @@ body{
 /*habilidades  home*/
 .home-sect__skills{    
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 60px;
+}
+
+.legend__skills a{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    mix-blend-mode: overlay;
+}
+.skills-frame{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5,1fr);
+
 }
 
 .skills-frame__icon{
