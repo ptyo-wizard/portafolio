@@ -427,7 +427,20 @@ body{
 
 
 
+/*seccion footer*/
+.footer__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--size-icon-menu);
+    font-size: 14px;
+    font-weight: 400;
+    color:var(--third-color);
+    background-color: var(--primary-color);
+    text-align: center;
 
+}
 /****************************home desktop*******************************/
 @media screen and (min-width:768px){
     .hero{
