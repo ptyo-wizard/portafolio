@@ -54,14 +54,7 @@ body{
 }
 
 
-.layer__project{
-    position: absolute;
-    top:43%;
-    left:50%;   
-    transform: rotate(90deg);
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-}
+
 .layer__skills{
     position: absolute;
     top:75%;
@@ -159,12 +152,11 @@ body{
 /*seccion proyectos recientes */
 .home-sect__projects{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 30%;
-    padding-left: 10px;
+    height: 30%;    
     border: 1px solid yellowgreen;
     margin-top: 50px;
     /* position: relative; */
@@ -172,7 +164,9 @@ body{
 
 .projects-frame{
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;    
 }
 
 
@@ -203,10 +197,16 @@ body{
 
 
 .projects-frame__name:hover{    
-    --clippy:  polygon(0 0, 100% 0, 100% 100%, 0 100%);    
-    
-     
+    --clippy:  polygon(0 0, 100% 0, 100% 100%, 0 100%);         
 } 
+
+.legend__projects{
+    font-size: 2rem;
+    color:var(--secondary-color);
+    transform: rotate(90deg);
+    mix-blend-mode: overlay;
+    
+}
 
 /*habilidades  home*/
 .home-sect__skills{    
