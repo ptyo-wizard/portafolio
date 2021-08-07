@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rouge+Script&display=swap');
 
 :root{
     /* paleta de colores */
@@ -12,8 +12,9 @@
 
 
 body{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     /* font-family: 'Rouge Script', cursive; */
+    background-color: var(--secondary-color);
 }
 
 /*hero*/
@@ -36,7 +37,7 @@ body{
     height: 90vh;
     border: 3px solid blue;
     position: relative;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
 }
 
 /*fondo soy*/
@@ -49,7 +50,7 @@ body{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip:text;
-    opacity: .4;    
+    opacity: 0;     /*.4*/
 }
 
 
@@ -73,6 +74,42 @@ body{
     opacity: .4; 
 }
 
+.layer{
+    position: absolute;
+    top:-60vh;
+    z-index: -5;
+    width: 100%;    
+    height: 100%;
+    background-color: var(--primary-color);
+}
+.layer__mask{
+    position: absolute;
+    top:0;
+    z-index: -3;
+    width: 100%;    
+    height: 5vh;
+    background-color: var(--secondary-color);
+}
+
+/*saludo*/
+.layer__greeting{    
+    color:var(--hover-color);
+    
+}
+.layer__title{    
+    font-size: 3.2rem;
+}
+
+.layer__point{
+    position: absolute;
+    top:5vh;
+    left: 71%;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--hover-color);
+}
 
 /*content home */
 .home-sect__content{
@@ -97,6 +134,7 @@ body{
     align-items: center;
     width: 100%;
     padding: 0 15px;
+    opacity: 0;
 }
 
 .text__title{
@@ -198,3 +236,4 @@ body{
 .social-icon{
     color: var(--third-color);
 }
+
