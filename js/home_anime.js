@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const socialIcons = document.querySelector('.home-sect__social');
     const skillsIcons = document.querySelector('.home-sect__skills');
 
-    const heroNav = document.querySelector('#hero-nav');
+    
 
 
     let isAnimate = true;
@@ -228,21 +228,19 @@ window.addEventListener('DOMContentLoaded', () => {
             delay: anime.stagger(500)
         });
     }
+    
+   
 
     document.addEventListener('click',(event)=>{
         
-        switch(event.target.id){
-            case 'icon-menu':
-                heroNav.classList.toggle('show-menu');        
-                break;
+        switch(event.target.id){           
             case 'menu-closed':
             case '_home':
             case '_about':
             case '_skills':
             case '_projects':
             case '_hobbies':
-            case '_contact':
-                heroNav.classList.toggle('show-menu');       
+            case '_contact':                  
                 break;
             default: {
                 if(isAnimate)
