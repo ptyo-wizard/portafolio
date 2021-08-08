@@ -14,8 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const skillsIcons = document.querySelector('.home-sect__skills');
     const initAnimation = document.querySelector('#init-animation');
 
+    let widthScreen =  window.innerWidth;
     
-
 
     let isAnimate = true;
     let animation;
@@ -203,12 +203,11 @@ window.addEventListener('DOMContentLoaded', () => {
             opacity:1
         })
 
-       
-        
-
-        // animation.finished.then(()=>{            
-        //     //moveProjects();
-        // })
+       animation.finished.then(()=>{  
+           if(widthScreen > 768) {
+                layer.style.borderRadius='15px'
+           }            
+        })
     }
 
     const moveProjects = () => { 
@@ -230,7 +229,14 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-   
+   window.addEventListener('resize',()=>{
+        widthScreen  = window.innerWidth;
+        if(widthScreen < 768 && isAnimate == false) {
+            layer.style.borderRadius='0'
+        } else if(widthScreen > 768 && isAnimate == false) {
+            layer.style.borderRadius='15px'
+        }
+   })
 
     initAnimation.addEventListener('click',(event)=>{          
             if(isAnimate){

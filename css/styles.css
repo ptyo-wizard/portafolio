@@ -185,6 +185,7 @@ body{
     width: 100%;    
     height: 100%;
     background-color: var(--primary-color);
+    
 }
 
 
@@ -436,7 +437,7 @@ body{
     grid-auto-flow: dense;
     grid-auto-rows: 300px;
     grid-template-columns: repeat(auto-fit,minmax(min(100%,500px),1fr));
-    border: 1px solid yellow;
+    
 }
 
 .projects__item{
@@ -604,6 +605,7 @@ body{
     height: 100%;
     background-color: var(--primary-color-rgb);
     
+    
 }
 
 .hero-nav{
@@ -611,15 +613,14 @@ body{
     top:0;
     left:0;     
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 30;   
     display: grid;   
     grid-template-rows: 100vh;
-    grid-template-columns: 100%;
-   
-    
+    grid-template-columns: 100%;  
     transition: transform .5s ease-in-out;    
     transform: translateX(100%);
+
 }
 
 .logo{
@@ -711,8 +712,8 @@ body{
         top:0;
         left:0;
         width: 100%;
-        height:5vh;
-        background-color: var(--secondary-color);
+        height:2vh;
+        background-color: var(--secondary-color);        
         z-index: 5;
     }
     .hero{       
@@ -726,11 +727,12 @@ body{
 
     .layer{
         position: absolute;
-        top:-60vh;
+        top:-50vh;
         z-index: -5;
         width: 100%;    
-        height: 100%;
+        height: 90%;
         background-color: var(--primary-color);
+        
         
     }
     
