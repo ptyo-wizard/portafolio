@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const legendProject = document.querySelector('.legend__projects');
     const socialIcons = document.querySelector('.home-sect__social');
     const skillsIcons = document.querySelector('.home-sect__skills');
+    const initAnimation = document.querySelector('#init-animation');
 
     
 
@@ -231,32 +232,12 @@ window.addEventListener('DOMContentLoaded', () => {
     
    
 
-    document.addEventListener('click',(event)=>{
-        
-        switch(event.target.id){           
-            case 'menu-closed':
-            case '_home':
-            case '_about':
-            case '_skills':
-            case '_projects':
-            case '_hobbies':
-            case '_contact':                  
-                break;
-            default: {
-                if(isAnimate)
-                    debounceBall();    
+    initAnimation.addEventListener('click',(event)=>{          
+            if(isAnimate){
+                debounceBall();    
                 isAnimate= false;
-            }
-        }
-        
-        
-        
-        
-        // animateBallAndTitle.play();
-        // animateBallAndTitle.finished.then(()=>{
-        //     //animateProjects.play();
-        // })
-    })
-
+                initAnimation.style.opacity=0;
+            }                
+    });
 
 });

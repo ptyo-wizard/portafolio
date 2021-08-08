@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/item_menu.js"></script>
     <script src="js/menu.js"></script>
+
+
 </head>
 <body>
     
@@ -29,8 +32,8 @@
 
                     <div class="logo">FRC.dev</div>          
                     <ul class="menu">
-                        <li class="menu__item" data-url="home">
-                            <a href="#home" class="menu__item__link" id="_home">Inicio.</a>
+                        <li class="menu__item active" data-url="home">
+                            <a href="#home" class="menu__item__link menu__item__link--active" id="_home">Inicio.</a>
                         </li>
                         <li class="menu__item" data-url="about">
                             <a href="#about" class="menu__item__link" id="_about">Quien soy.</a>
@@ -67,7 +70,9 @@
             
 
         </nav>    
-
+            <div class="init-animation" id="init-animation">
+                <a href="#tio" class="init-animation__link"> click</a>
+            </div>
             <div class="layer__about">
                 <h2>SOY</h2>
             </div>
@@ -221,30 +226,30 @@
                 </div>    
             
         </section>
-        <section class="projects-sect" id="projects">
-            <h2 class="title">Proyectos</h2>
-            <h2 class="sub-title">Algunos proyectos en los que he trabajado. </h2>
-            <div class="projects__content">
-                <div class="projects__item">
-                    <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
-                    <div class="projects__layer"></div>
+        <section class="projects-sect container" id="projects">
+            
+                <h2 class="title">Proyectos</h2>
+                <h2 class="sub-title">Algunos proyectos en los que he trabajado. </h2>
+                <div class="projects__content">
+                    <div class="projects__item">
+                        <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
+                        <div class="projects__layer"></div>
+                    </div>
+                    <div class="projects__item">
+                        <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
+                        <div class="projects__layer"></div>
+    
+                    </div>
+                    <div class="projects__item">
+                        <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
+                        <div class="projects__layer"></div>
+                    </div>
+                    
+                  
                 </div>
-                <div class="projects__item">
-                    <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
-                    <div class="projects__layer"></div>
-
-                </div>
-                <div class="projects__item">
-                    <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
-                    <div class="projects__layer"></div>
-                </div>
-                <!-- <div class="projects__item">
-                    <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
-                    <div class="projects__layer"></div>
-
-                </div> -->
-              
-            </div>
+            
+            
+          
         </section>        
         <section class="contact-sect container" id="contact">
             <h2 class="title">Contacto</h2>

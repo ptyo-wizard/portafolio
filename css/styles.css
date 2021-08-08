@@ -13,10 +13,11 @@
     --text-color:#414141;
 
     /*contenedor general*/
-    --paddign-container:6.25em 0;   
+    --padding-container:6.25em 0;   
     --width-container:90%; 
     --maxwidth-container:1200px;
 
+    
 
     /*tamaño de fuente*/
     --title:clamp(2.5rem,5vw,3.75rem);
@@ -28,6 +29,9 @@
     --size-icon-menu:40px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -62,7 +66,7 @@ body{
 .container{
     width: var(--width-container);
     max-width: var(--maxwidth-container);
-    padding: var(--paddign-container);
+    padding: var(--padding-container);
     margin: 0 auto;
     overflow: hidden;
     border:1px solid red;
@@ -209,6 +213,29 @@ body{
 }
 
 
+/*iniciar animation*/
+.init-animation{
+    position: absolute;
+    top: 20vh;
+    z-index: 20;
+    width: calc(var(--text-title)*1.8);
+    height: calc(var(--text-title)*1.8);
+    font-size: var(--text-title);
+    mix-blend-mode: overlay;
+    font-family: 'Rouge Script', cursive;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    line-height: calc(var(--text-title)*1.5);
+    text-align: center;
+    
+}
+
+.init-animation__link{       
+    cursor: pointer;
+    color:var(--secondary-color);  
+    
+}
+
 
 /*home sect */
 .home-sect{
@@ -217,8 +244,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 90vh;
-    
+    height: 90vh;    
     position: relative;
     
 }
@@ -402,6 +428,9 @@ body{
 
 }
 /*seccion projects*/
+.projects-sect{
+    --padding-container:0;
+}
 .projects__content{
     display: grid;
     grid-auto-flow: dense;
@@ -437,7 +466,7 @@ body{
 }
 
 .projects__item:hover .projects__layer{
-    transform:translateX(0%)
+    transform:translateX(0%);
 
 }
 
@@ -619,9 +648,13 @@ body{
     font-weight: 700;   
 }
 
-.menu__item__link--active{ 
-    color: var(--hover-color);
-    
+.menu__item__link:hover{
+    transition: all .4s;
+    color: var(--primary-color);
+}
+
+.active a { 
+    color: var(--hover-color);    
 }
 
 .menu__item__link--btn{ 
@@ -659,6 +692,7 @@ body{
     background-color: var(--secondary-color); 
     
 }
+
 
 
 .show-menu{
