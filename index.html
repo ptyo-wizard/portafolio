@@ -19,7 +19,7 @@
     <header class="hero">
         
         <section class="home-sect" id="home">
-            <nav class="hero-nav">   
+            <nav class="hero-nav" id="hero-nav">   
                 <div class="hero-nav__content">
 
                 <div class="logo">FRC.dev</div>          
@@ -36,10 +36,7 @@
                     <li class="menu__item" data-url="projects">
                         <a href="#projects" class="menu__item__link" id="_projects">Proyectos.</a>
                     </li>
-                    <li class="menu__item" data-url="hobbies">
-                        <a href="#hobbies" class="menu__item__link" id="_hobbies">Hobbies.</a>
-                        
-                    </li>
+                   
                     <li class="menu__item" data-url="contact">
                         <a href="#contact" class="menu__item__link" id="_contact">Contacto.</a>
                         
@@ -53,7 +50,7 @@
                 </ul>
                 <div class="menu__bar">
                     <div class="menu__bar__btn">
-                        <a href="#home-sect" class=" menu__btn btn btn--fl" id="menu-bar-btn">
+                        <a href="#home-sect" class=" menu__btn btn btn--fl" id="menu-closed">
                             <i class="fas fa-times"></i>
                         </a>
                         
@@ -217,7 +214,9 @@
                 </div>    
             
         </section>
-        <section class="projects-sect">
+        <section class="projects-sect" id="projects">
+            <h2 class="title">Proyectos</h2>
+            <h2 class="sub-title">Algunos proyectos en los que he trabajado. </h2>
             <div class="projects__content">
                 <div class="projects__item">
                     <img src="assets/fondo.jpg" alt="" class="projects__item__icon">
@@ -240,7 +239,7 @@
               
             </div>
         </section>        
-        <section class="contact-sect container">
+        <section class="contact-sect container" id="contact">
             <h2 class="title">Contacto</h2>
             <h3 class="sub-title">Contactame para que trabajemos juntos</h2>
                 <div class="contact__content">

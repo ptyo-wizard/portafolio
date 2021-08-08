@@ -8,10 +8,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const base_layer = document.querySelector('.home-sect');
     const title = document.querySelector('.home-sect__text');
     const projects = document.querySelectorAll('.projects-frame__title');
-    const inputMenu = document.querySelector('#menu');
+    
     const legendProject = document.querySelector('.legend__projects');
     const socialIcons = document.querySelector('.home-sect__social');
     const skillsIcons = document.querySelector('.home-sect__skills');
+
+    const heroNav = document.querySelector('#hero-nav');
 
 
     let isAnimate = true;
@@ -230,21 +232,22 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click',(event)=>{
         
         switch(event.target.id){
-            case 'menu-bar-btn':
-                inputMenu.checked = 0;        
+            case 'icon-menu':
+                heroNav.classList.toggle('show-menu');        
                 break;
+            case 'menu-closed':
             case '_home':
             case '_about':
             case '_skills':
             case '_projects':
             case '_hobbies':
             case '_contact':
-                inputMenu.checked = 0;        
+                heroNav.classList.toggle('show-menu');       
                 break;
             default: {
                 if(isAnimate)
                     debounceBall();    
-                //isAnimate= false;
+                isAnimate= false;
             }
         }
         
