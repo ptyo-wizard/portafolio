@@ -217,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         anime.set([projects],{
-            translateX: '-600%',
+            translateX: '-100%',
         });
 
         animation

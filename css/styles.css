@@ -280,6 +280,7 @@ body{
     height: 30%;        
     margin-top: 1.5rem;
     
+    
     /* position: relative; */
 }
 
@@ -288,7 +289,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;    
-    
+    overflow: hidden;
 }
 
 
@@ -296,7 +297,7 @@ body{
 .projects-frame__title {
     font-size: 1rem;
     line-height: 2.5rem;  
-    transform: translateX(-600%);
+    transform: translateX(-100%);
 }
 
 .projects-frame__title__link{
@@ -728,7 +729,16 @@ body{
     
      .hero-nav{   
         display: grid;
-        grid-template-columns: 40% 60%;                   
+        grid-template-columns: 40% 60%;       
+    }
+
+    /*layer greeting*/
+    .layer__title{    
+        font-size: 4.5rem;           
+    }
+    
+    .layer__point{        
+        top:2.3vh;
         
     }
    
