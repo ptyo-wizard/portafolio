@@ -13,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const socialIcons = document.querySelector('.home-sect__social');
     const skillsIcons = document.querySelector('.home-sect__skills');
     const initAnimation = document.querySelector('#init-animation');
+    const topBar = document.querySelector('.top-bar');
+
+
 
     let widthScreen =  window.innerWidth;
     
@@ -206,7 +209,9 @@ window.addEventListener('DOMContentLoaded', () => {
        animation.finished.then(()=>{  
            if(widthScreen > 768) {
                 layer.style.borderRadius='15px'
-           }            
+                topBar.style.top='40vh';
+           }     
+          
         })
     }
 
@@ -233,8 +238,10 @@ window.addEventListener('DOMContentLoaded', () => {
         widthScreen  = window.innerWidth;
         if(widthScreen < 768 && isAnimate == false) {
             layer.style.borderRadius='0'
+            topBar.style.top='0';
         } else if(widthScreen > 768 && isAnimate == false) {
             layer.style.borderRadius='15px'
+            topBar.style.top='40vh';
         }
    })
 

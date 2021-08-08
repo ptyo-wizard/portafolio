@@ -741,7 +741,7 @@ body{
     .top-bar{        
         width: 45px;
         height: 45px;            
-        top:40vh;
+        top:15vh;
         left:95%;        
         border-radius: 0;        
         background-color: transparent;
